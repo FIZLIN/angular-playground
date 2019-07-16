@@ -245,12 +245,12 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<IUser[]> {
-    return of(users)
+    return of(users).pipe(delay(100))
     // return this.http.get<IUser[]>(`https://jsonplaceholder.typicode.com/users`);
   }
 
   getOne(id: number): Observable<IUser> {
-    return of(users[0]);
+    return of(users[0]).pipe(delay(100));
     // return this.http.get<IUser>(`https://jsonplaceholder.typicode.com/users/${id}`);
   }
 
