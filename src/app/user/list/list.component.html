@@ -1,0 +1,8 @@
+<div *ngFor="let user of (userList$ | async)">
+  <div class="data">{{ user.name }} - {{ user.email }}</div>
+  <div class="controls">
+    <button mat-icon-button matTooltip="Edit User">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+</div>
