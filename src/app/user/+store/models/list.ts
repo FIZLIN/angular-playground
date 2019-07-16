@@ -21,6 +21,7 @@ export class ListModel {
   loadUsers() {
     this.store.dispatch(new LoadUsers());
   }
+
   setIsLoaded(isLoaded: boolean) {
     this.store.dispatch(new SetIsLoaded({ isLoaded }));
   }

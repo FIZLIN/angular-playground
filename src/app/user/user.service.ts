@@ -21,7 +21,5 @@ export class UserService {
 
   save(user: IUser): Observable<IUser> {
     return of(user).pipe(delay(1000));
-    // const url = user.id ? `users/${user.id}/update` : `users/create`;
-    // return this.http.post<IUser>(url, user);
   }
 }
